@@ -7,6 +7,23 @@ import A from '../../primitives/A';
 import Icon from '../../ui/Icon';
 import HomeIcon from '../../../src/icons/home.svg';
 
+const MainNav = styled.nav`
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 960px;
+    color: ${(props) => props.theme.colors.text};
+    font-weight: bold;
+    font-size: 1.2rem;
+`;
+
+const LogoSection = styled.section`
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+`;
 const StyledA = styled(A)`
     text-decoration: none;
     ${(props) =>
@@ -47,9 +64,10 @@ const sections = [
     },
 ];
 
-export default function Menu({ active }) {
+export default function TopNav({ active }) {
     return (
-        <Nav>
+        <MainNav>
+            <LogoSection>Fayetteville Strong</LogoSection>
             <Ul inline reset>
                 {sections.map((section, i) => (
                     <Li key={i}>
@@ -64,6 +82,6 @@ export default function Menu({ active }) {
                     </Li>
                 ))}
             </Ul>
-        </Nav>
+        </MainNav>
     );
 }

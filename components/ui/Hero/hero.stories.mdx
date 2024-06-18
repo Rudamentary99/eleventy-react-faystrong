@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { heroData } from "./data.js";
+import Hero from "./";
+
+<Meta title='UI/Hero' componenet={Hero}/>
+
+# Hero
+
+<Canvas>
+    <Story name='Default'>
+        <Hero data={heroData} />
+    </Story>
+</Canvas>

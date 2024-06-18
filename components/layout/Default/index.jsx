@@ -4,7 +4,7 @@ import client from './index.client.js';
 import Header from '../../primitives/Header';
 import Main from '../../primitives/Main';
 import ThemeProvider from '../../../theme';
-import Menu from '../Menu';
+import TopNav from '../TopNav';
 import H1 from '../../primitives/H1';
 import Span from '../../primitives/Span';
 import Script from '../../ui/Script';
@@ -49,7 +49,7 @@ export default function Default({ head, title, children, active }) {
                 {head}
                 <body>
                     <StyledHeader>
-                        <Menu active={active} />
+                        <TopNav active={active} />
                     </StyledHeader>
                     {title && <StyledH1>{title}</StyledH1>}
                     <StyledMain>{children}</StyledMain>
