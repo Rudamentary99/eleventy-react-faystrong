@@ -11,13 +11,15 @@ const MainNav = styled.nav`
     display: flex;  
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
-    margin: 0 auto;
+    padding: 1rem;
     max-width: 960px;
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text_light};
     font-weight: bold;
     font-size: 1.2rem;
-`;
+    background-color: ${(props) => props.theme.colors.primary};
+    width: 100%;
+    
+    `;
 
 const LogoSection = styled.section`
     display: flex;
@@ -26,10 +28,11 @@ const LogoSection = styled.section`
 `;
 const StyledA = styled(A)`
     text-decoration: none;
+    color: ${(props) => props.theme.colors.text_light};
     ${(props) =>
         props.active &&
         css`
-            border-bottom: 2px solid ${props.theme.colors.primary};
+            border-bottom: 2px solid ${props.theme.colors.text_light};
             padding-bottom: 0.25rem;
         `}
 `;
