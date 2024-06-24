@@ -4,6 +4,7 @@ const type = {
     “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
     sans-serif`,
     fontMono: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`,
+    fontTitle: `Abril Fatface, serif`,
     leading: 1.4,
     root: '112.5%',
     base: '1rem',

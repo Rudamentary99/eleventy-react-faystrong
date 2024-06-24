@@ -25,6 +25,7 @@ const LogoSection = styled.section`
     display: flex;
     align-items: center;
     margin-right: auto;
+    font-family: ${(props) => props.theme.type.fontTitle};
 `;
 const StyledA = styled(A)`
     text-decoration: none;

@@ -27,6 +27,11 @@ export default function Head({ title, slogan, description, ...props }) {
                 href="/img/favicons/favicon-16x16.png"
             />
             <link rel="manifest" href="/img/favicons/site.webmanifest" />
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+            
             <meta name="msapplication-TileColor" content="#2b5797" />
             <meta name="theme-color" content="#ffffff" />
             <meta
