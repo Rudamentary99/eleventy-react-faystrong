@@ -51,12 +51,13 @@ export default function Info({
     const { title } = site;
     return (
         <DefaultLayout
-            head={
-                <Head
-                    title={pageTitle}
-                    slogan={title}
-                    description={description}
-                />
+
+            headProps={
+                {
+                    title: pageTitle,
+                    description,
+                    slogan: title,
+                }
             }
             title={pageTitle}
             active="/info/"

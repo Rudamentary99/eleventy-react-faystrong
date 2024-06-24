@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import client from './index.client.js';
+import Head from '../../layout/Head';
 import Header from '../../primitives/Header';
 import Main from '../../primitives/Main';
 import ThemeProvider from '../../../theme';
@@ -42,11 +43,13 @@ const JsPoweredYear = styled(Span)`
     }
 `;
 
-export default function Default({ head, title, children, active }) {
+export default function Default({ head, headProps, title, children, active }) {
+    let pageHead = head || <Head {...headProps} />;
+
     return (
         <ThemeProvider>
             <html lang="en" className="no-js">
-                {head}
+                {pageHead}
                 <body>
                     <StyledHeader>
                         <TopNav active={active} />
