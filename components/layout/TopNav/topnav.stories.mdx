@@ -1,5 +1,9 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import TopNav from './';
+import Hero from '../../ui/Hero';
+import data from '../../ui/Hero/data';
+import styled from 'styled-components';
+
 
 <Meta title="LAYOUT/Top Nav" component={TopNav} />
 
@@ -7,7 +11,14 @@ import TopNav from './';
 
 <Canvas>
     <Story name="Default">
+    <div style={{position: "relative"}}>
         <TopNav />
+        <Hero data={{
+    title: 'Welcome to our page',
+    slogan: 'We are happy',
+    background: 'https://images.unsplash.com/photo-1589763980315-f49dd8cdbef1?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+}}/>
+</div>
     </Story>
     <Story name="Active">
         <TopNav active="/blog/" />

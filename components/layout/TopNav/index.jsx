@@ -12,23 +12,27 @@ const MainNav = styled.nav`
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    max-width: 960px;
     color: ${(props) => props.theme.colors.text_light};
     font-weight: bold;
     font-size: 1.2rem;
-    background-color: ${(props) => props.theme.colors.primary};
+    // background-color: ${(props) => props.theme.colors.primary};
     width: 100%;
-    
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid ${(props) => props.theme.colors.text_light};
     `;
 
 const LogoSection = styled.section`
     display: flex;
     align-items: center;
     margin-right: auto;
-    font-family: ${(props) => props.theme.type.fontTitle};
+    font-family: ${(props) => props.theme.type.heading};
 `;
 const StyledA = styled(A)`
     text-decoration: none;
+    font-family: ${(props) => props.theme.type.subheading};
+    font-weight: 100;
+    text-transform: capitalize;
     color: ${(props) => props.theme.colors.text_light};
     ${(props) =>
         props.active &&
@@ -36,19 +40,17 @@ const StyledA = styled(A)`
             border-bottom: 2px solid ${props.theme.colors.text_light};
             padding-bottom: 0.25rem;
         `}
+     
+	transition: 170ms ease-in-out, background-color 170ms ease-in-out;
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 const sections = [
     {
-        title: 'Back to the homepage',
-        text: 'Home',
-        url: '/',
-        icon: HomeIcon,
-        noText: true,
-    },
-    {
         title: 'A test page',
-        text: 'Info',
+        text: 'about',
         url: '/info/',
     },
     {

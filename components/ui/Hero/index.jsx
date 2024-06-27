@@ -11,12 +11,15 @@ export default function Hero({ data, children }) {
 
         color: white;
 
-        padding: calc(${(props) => props.theme.spaceUnit} * 4) 0;
-        margin:  calc(${(props) => props.theme.spaceUnit} * -2);
+        padding: 0;
+        padding-top: calc(${(props) => props.theme.spaceUnit} * 9);
+        padding-bottom: calc(${(props) => props.theme.spaceUnit} * 4);
         // margin-bottom: calc(${(props) => props.theme.spaceUnit} * 4);
+        position: absolute;
+        top: 0;
+        width: 100%;
     `;
     const Wrapper = styled.div`
-        margin: 0 auto;
         max-width: 800px;
         text-align: Left;
         border-left: 1px solid ${(props) => props.theme.colors.primary};
